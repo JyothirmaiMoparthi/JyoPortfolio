@@ -3,22 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jyothirmai M — Software QA Engineer</title>
+<title>Jyothirmai Moparthi — QA Engineer</title>
+<meta name="description" content="Jyothirmai Moparthi — QA Engineer specializing in Conversational AI & LLM quality, production debugging, and SQL & Python automation.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&family=Mulish:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --bg: #08090d;
-    --surface: #0f1117;
-    --card: #141720;
-    --border: #1e2230;
-    --gold: #c8a96e;
-    --gold-dim: #8c7045;
-    --gold-light: #e8c98c;
-    --text: #e8e4d9;
-    --muted: #7a7a8a;
+    --bg: #faf7f0;
+    --surface: #f3eee3;
+    --card: #ffffff;
+    --border: #e3dccb;
+    --gold: #1d64a8;
+    --gold-dim: #5b8cc0;
+    --gold-light: #2a7cc7;
+    --text: #1b2333;
+    --muted: #535d6e;
     --accent: #4a9eff;
   }
 
@@ -28,7 +29,7 @@
     background: var(--bg);
     color: var(--text);
     font-family: 'Mulish', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.7;
     overflow-x: hidden;
   }
@@ -38,7 +39,7 @@
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; justify-content: space-between; align-items: center;
     padding: 1.25rem 3rem;
-    background: rgba(8,9,13,0.85);
+    background: rgba(250,247,240,0.92);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
   }
@@ -71,7 +72,7 @@
     overflow: hidden;
   }
   .hero-grid {
-    position: absolute; inset: 0; opacity: 0.04;
+    position: absolute; inset: 0; opacity: 0.05;
     background-image:
       linear-gradient(var(--gold) 1px, transparent 1px),
       linear-gradient(90deg, var(--gold) 1px, transparent 1px);
@@ -81,12 +82,12 @@
     position: absolute;
     width: 600px; height: 600px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(200,169,110,0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(29,100,168,0.08) 0%, transparent 70%);
     top: 50%; left: 60%;
     transform: translate(-50%, -50%);
     pointer-events: none;
   }
-  .hero-content { max-width: 800px; position: relative; }
+  .hero-content { max-width: 820px; position: relative; }
   .hero-tag {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.72rem;
@@ -99,10 +100,11 @@
   .hero-tag::before {
     content: '';
     display: block; width: 2rem; height: 1px; background: var(--gold);
+    flex-shrink: 0;
   }
   h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(3.5rem, 7vw, 6rem);
+    font-size: clamp(3.2rem, 7vw, 6rem);
     font-weight: 300;
     line-height: 1.05;
     color: var(--text);
@@ -123,7 +125,7 @@
   .hero-desc {
     font-size: 1rem;
     color: var(--muted);
-    max-width: 560px;
+    max-width: 600px;
     margin-bottom: 2.5rem;
     line-height: 1.8;
   }
@@ -135,7 +137,7 @@
     text-transform: uppercase;
     padding: 0.875rem 2rem;
     background: var(--gold);
-    color: #08090d;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 500;
     transition: background 0.3s, transform 0.2s;
@@ -251,7 +253,7 @@
     margin-bottom: 1.25rem;
   }
   .skill-meta {
-    display: flex; justify-content: space-between;
+    display: flex; justify-content: space-between; gap: 1rem;
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.7rem;
     color: var(--muted);
@@ -322,6 +324,11 @@
     color: var(--text);
     margin-bottom: 0.2rem;
   }
+  .t-client {
+    color: var(--muted);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+  }
   .t-company {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.72rem;
@@ -329,11 +336,22 @@
     letter-spacing: 0.08em;
     margin-bottom: 0.75rem;
   }
-  .t-desc {
+  .t-list {
+    list-style: none;
+    max-width: 680px;
+  }
+  .t-list li {
     font-size: 0.9rem;
     color: var(--muted);
-    max-width: 600px;
-    line-height: 1.8;
+    line-height: 1.75;
+    padding-left: 1.1rem;
+    position: relative;
+    margin-bottom: 0.4rem;
+  }
+  .t-list li::before {
+    content: '—';
+    position: absolute; left: 0;
+    color: var(--gold-dim);
   }
   .t-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.75rem; }
   .t-tag {
@@ -368,7 +386,7 @@
     transform: scaleX(0); transform-origin: left;
     transition: transform 0.4s ease;
   }
-  .project-card:hover { border-color: var(--gold-dim); transform: translateY(-4px); }
+  .project-card:hover { border-color: var(--gold-dim); transform: translateY(-4px); box-shadow: 0 10px 30px rgba(27,35,51,0.08); }
   .project-card:hover::after { transform: scaleX(1); }
   .project-num {
     font-family: 'JetBrains Mono', monospace;
@@ -428,6 +446,11 @@
     color: var(--muted);
     letter-spacing: 0.1em;
   }
+  .edu-note {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-top: 0.75rem;
+  }
 
   /* CONTACT */
   #contact {
@@ -436,20 +459,20 @@
   }
   #contact h2 { margin-bottom: 1rem; }
   .contact-sub {
-    font-size: 1rem; color: var(--muted); margin-bottom: 3rem;
+    color: var(--muted); margin-bottom: 3rem;
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: 1.25rem;
   }
   .contact-links {
-    display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;
+    display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap;
   }
   .contact-link {
     display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
     text-decoration: none;
     transition: transform 0.3s;
   }
-  .contact-link:hover { transform: translateY(-4px); }
+  a.contact-link:hover { transform: translateY(-4px); }
   .contact-link .cl-label {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.6rem;
@@ -470,9 +493,9 @@
     margin-bottom: 0.5rem;
     transition: border-color 0.3s, background 0.3s;
   }
-  .contact-link:hover .contact-icon {
+  a.contact-link:hover .contact-icon {
     border-color: var(--gold);
-    background: rgba(200,169,110,0.08);
+    background: rgba(29,100,168,0.08);
   }
 
   /* FOOTER */
@@ -496,7 +519,7 @@
     position: absolute;
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.55rem;
-    color: rgba(200,169,110,0.15);
+    color: rgba(29,100,168,0.15);
     letter-spacing: 0.05em;
     pointer-events: none;
     animation: floatUp 8s linear infinite;
@@ -524,6 +547,7 @@
     #hero { padding: 7rem 1.5rem 3rem; }
     .about-grid, .edu-grid { grid-template-columns: 1fr; gap: 3rem; }
     .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+    .data-float { display: none; }
     footer { flex-direction: column; gap: 0.5rem; text-align: center; }
   }
 </style>
@@ -547,16 +571,17 @@
   <div class="hero-grid"></div>
   <div class="hero-glow"></div>
   <div class="hero-content">
-    <div class="hero-tag">QA Engineer &amp; Automation Lead</div>
-    <h1>Jyothirmai <em>M</em></h1>
-    <p class="hero-sub">Quality-first. Automation-driven. Zero defects at scale.</p>
+    <div class="hero-tag">QA Engineer · Conversational AI &amp; LLM Quality</div>
+    <h1>Jyothirmai <em>Moparthi</em></h1>
+    <p class="hero-sub">Find the real root cause. Prove it. Prevent it.</p>
     <p class="hero-desc">
-      4+ years leading end-to-end quality assurance across enterprise web and mobile platforms —
-      from test plan design to Selenium &amp; UiPath automation frameworks achieving 75% coverage
-      in 2 months. I don't just find bugs — I build systems that prevent them.
+      QA Engineer with an M.S. and 4+ years on production healthcare and SaaS platforms — currently testing an
+      LLM-powered conversational AI assistant for UnitedHealth Group. I trace failures across transcripts, logs,
+      configuration, and integration data, write reproducible bug reports with clear severity and impact, and
+      automate the repetitive checks with Python and SQL.
     </p>
     <div class="hero-ctas">
-      <a href="#projects" class="btn-primary">View My Work</a>
+      <a href="#experience" class="btn-primary">View My Work</a>
       <a href="#contact" class="btn-outline">Get In Touch</a>
     </div>
     <div class="hero-stats">
@@ -565,83 +590,87 @@
         <div class="stat-label">Years in QA</div>
       </div>
       <div>
-        <div class="stat-num">75%</div>
-        <div class="stat-label">Automation Coverage</div>
+        <div class="stat-num">0→75%</div>
+        <div class="stat-label">Automation in 2 Months</div>
       </div>
       <div>
-        <div class="stat-num">✦</div>
-        <div class="stat-label">Google Certified</div>
+        <div class="stat-num">0</div>
+        <div class="stat-label">Quality Incidents · 6+ Mo</div>
       </div>
       <div>
-        <div class="stat-num">◆</div>
-        <div class="stat-label">Infosys Award</div>
+        <div class="stat-num">~30%</div>
+        <div class="stat-label">Less Manual Review</div>
       </div>
     </div>
   </div>
 
-  <div class="data-float" style="right:8%;top:35%;animation-delay:0s">assert result == expected</div>
-  <div class="data-float" style="right:12%;top:55%;animation-delay:2.5s">driver.find_element(By.ID, ...)</div>
-  <div class="data-float" style="right:5%;top:65%;animation-delay:5s">coverage ↑ 75% in 2 months</div>
+  <div class="data-float" style="right:8%;top:35%;animation-delay:0s">assert response.escalated == expected</div>
+  <div class="data-float" style="right:12%;top:55%;animation-delay:2.5s">SELECT * FROM transcripts WHERE outcome != expected</div>
+  <div class="data-float" style="right:5%;top:65%;animation-delay:5s">root_cause: config ≠ model</div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
   <div class="section-label">Who I Am</div>
-  <h2>QA Engineer by craft,<br><em>automation lead</em> by results</h2>
+  <h2>QA Engineer for<br><em>AI that has to be right</em></h2>
   <div class="about-grid">
     <div class="about-text fade-in">
-      <p>I'm a QA Engineer with 4+ years delivering comprehensive quality assurance across enterprise web and mobile platforms. My work spans the full testing lifecycle — from writing test plans and manual test cases to architecting Selenium and UiPath automation frameworks that run daily regression cycles at scale.</p>
-      <p>At Infosys (client: Cisco), I drove automation from zero to 75% test coverage in just 2 months as Automation Lead on the XYLEM Smart Bonding Platform, earning the Infosys Technology Award from the CTO. At BNS International, I built Python-based data validation frameworks monitoring 1M+ daily records with zero quality incidents over 6+ months.</p>
-      <p>My edge? I design quality in from the start — not as an afterthought — so teams ship fast and ship right.</p>
-      <div class="cert-badge">Google Professional Security Operations Engineer</div>
+      <p>I test a member-facing LLM-powered chatbot/copilot for UnitedHealth Group — reviewing conversations for wrong responses, failed escalations, and edge cases against defined quality standards and scoring rubrics. When something breaks, I trace it across transcripts, system logs, API payloads, and configuration to separate model behavior from config errors, data problems, and platform bugs, then route each issue to the right owner.</p>
+      <p>Before that, at Infosys (client: Cisco), I built the QA framework for the XYLEM Smart Bonding platform — scaling automation from 0 to ~75% in two months, debugging production integrations across MuleSoft, MongoDB, and REST/SOAP APIs, and leading a 12-member QA team through 4 releases with zero critical defects.</p>
+      <p>I work within HIPAA and PHI handling standards, and I use AI-assisted triage (Claude Code) to spend less time on repetitive review and more on the failures that matter.</p>
+      <div class="cert-badge">Google Cloud Professional Security Operations Engineer</div>
       <div class="award-box">
         <div class="award-title">Infosys Technology Award — Tech Transformers (Large)</div>
-        <p>Awarded by CTO for achieving 75% automation coverage in 2 months on the XYLEM Smart Bonding Platform serving millions of Cisco users.</p>
+        <p>Recognized for scaling automation coverage from 0 to ~75% in two months on Cisco's XYLEM Smart Bonding platform.</p>
       </div>
     </div>
     <div class="skills-col fade-in">
       <h3>Core Skills</h3>
       <div class="skill-row">
-        <div class="skill-meta"><span class="skill-name">Test Automation (Selenium/UiPath)</span><span>Expert</span></div>
+        <div class="skill-meta"><span class="skill-name">Conversational AI / LLM Chatbot Testing</span><span>Advanced</span></div>
+        <div class="skill-bar-bg"><div class="skill-bar-fill" style="--pct:90%"></div></div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-meta"><span class="skill-name">Root Cause &amp; Log Analysis</span><span>Expert</span></div>
+        <div class="skill-bar-bg"><div class="skill-bar-fill" style="--pct:93%"></div></div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-meta"><span class="skill-name">SQL &amp; Data Reconciliation</span><span>Expert</span></div>
         <div class="skill-bar-bg"><div class="skill-bar-fill" style="--pct:92%"></div></div>
       </div>
       <div class="skill-row">
-        <div class="skill-meta"><span class="skill-name">Manual & Functional Testing</span><span>Expert</span></div>
-        <div class="skill-bar-bg"><div class="skill-bar-fill" style="--pct:95%"></div></div>
-      </div>
-      <div class="skill-row">
-        <div class="skill-meta"><span class="skill-name">Python Test Frameworks</span><span>Advanced</span></div>
+        <div class="skill-meta"><span class="skill-name">Python Automation (pytest)</span><span>Advanced</span></div>
         <div class="skill-bar-bg"><div class="skill-bar-fill" style="--pct:88%"></div></div>
       </div>
       <div class="skill-row">
-        <div class="skill-meta"><span class="skill-name">API Testing (REST/SOAP)</span><span>Advanced</span></div>
-        <div class="skill-bar-bg"><div class="skill-bar-fill" style="--pct:83%"></div></div>
+        <div class="skill-meta"><span class="skill-name">REST APIs &amp; JSON/YAML Config</span><span>Advanced</span></div>
+        <div class="skill-bar-bg"><div class="skill-bar-fill" style="--pct:85%"></div></div>
       </div>
       <div class="skill-row">
-        <div class="skill-meta"><span class="skill-name">Load & Performance Testing</span><span>Proficient</span></div>
-        <div class="skill-bar-bg"><div class="skill-bar-fill" style="--pct:78%"></div></div>
-      </div>
-      <div class="skill-row">
-        <div class="skill-meta"><span class="skill-name">Mobile Testing (iOS/Android)</span><span>Proficient</span></div>
-        <div class="skill-bar-bg"><div class="skill-bar-fill" style="--pct:74%"></div></div>
+        <div class="skill-meta"><span class="skill-name">UI Automation (Playwright / Selenium)</span><span>Advanced</span></div>
+        <div class="skill-bar-bg"><div class="skill-bar-fill" style="--pct:84%"></div></div>
       </div>
       <div style="margin-top:2rem;">
         <h3>Tools &amp; Technologies</h3>
         <div class="tool-chips">
-          <span class="chip">Selenium WebDriver</span>
-          <span class="chip">UiPath Studio</span>
           <span class="chip">Python</span>
+          <span class="chip">pytest</span>
+          <span class="chip">Playwright</span>
+          <span class="chip">Selenium</span>
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">Oracle</span>
+          <span class="chip">SQL Server</span>
           <span class="chip">Postman</span>
-          <span class="chip">Jira</span>
-          <span class="chip">SQL</span>
-          <span class="chip">Appium</span>
-          <span class="chip">Git</span>
-          <span class="chip">Apache Airflow</span>
+          <span class="chip">REST APIs</span>
+          <span class="chip">JSON / YAML</span>
           <span class="chip">MongoDB</span>
-          <span class="chip">Docker</span>
-          <span class="chip">AWS Redshift</span>
-          <span class="chip">Snowflake</span>
-          <span class="chip">Agile / Scrum</span>
+          <span class="chip">MuleSoft</span>
+          <span class="chip">Apache Airflow</span>
+          <span class="chip">GitHub Actions</span>
+          <span class="chip">Jira</span>
+          <span class="chip">Confluence</span>
+          <span class="chip">Claude Code</span>
+          <span class="chip">HIPAA / PHI</span>
         </div>
       </div>
     </div>
@@ -656,37 +685,48 @@
 
     <div class="timeline-item current fade-in">
       <div class="t-meta">Mar 2025 — Present · Ohio, USA</div>
-      <div class="t-role">Data &amp; QA Analyst</div>
+      <div class="t-role">QA Engineer <span class="t-client"> · Client: UnitedHealth Group</span></div>
       <div class="t-company">BNS International Inc.</div>
-      <div class="t-desc">Built and maintained automated data validation and exception-flagging test frameworks in Python monitoring 1M+ daily records — designed test cases covering edge cases, data accuracy, and regression scenarios; achieved zero quality incidents over 6+ months. Validated mobile-responsive dashboards across iOS and Android environments for usability, performance, and cross-device consistency.</div>
+      <ul class="t-list">
+        <li>Test a member-facing LLM-powered chatbot/copilot, reviewing conversations for wrong responses, failed escalations, and edge cases against defined quality standards and scoring rubrics.</li>
+        <li>Trace failures across transcripts, system logs, API payloads, and configuration to separate model behavior from config errors, data problems, and platform bugs — routing each to the right owner.</li>
+        <li>Write reproducible bug reports with severity, member impact, and evidence; track quality metrics and trends for product and engineering, with zero quality incidents over 6+ months.</li>
+        <li>Automate repetitive checks in Python and SQL (outcome reconciliation, data validation, regression runs) and use Claude Code for AI-assisted triage, cutting manual review ~30%.</li>
+      </ul>
       <div class="t-tags">
-        <span class="t-tag">Python Automation</span><span class="t-tag">Apache Airflow</span>
-        <span class="t-tag">Data Validation</span><span class="t-tag">Mobile QA</span>
-        <span class="t-tag">Regression Testing</span>
+        <span class="t-tag">LLM Chatbot QA</span><span class="t-tag">Root Cause Analysis</span>
+        <span class="t-tag">Python</span><span class="t-tag">SQL</span>
+        <span class="t-tag">Quality Rubrics</span><span class="t-tag">HIPAA</span>
       </div>
     </div>
 
     <div class="timeline-item fade-in">
       <div class="t-meta">Dec 2023 — Dec 2024 · Ohio, USA</div>
-      <div class="t-role">Data Analyst, Student Assistant</div>
+      <div class="t-role">Student Assistant, Data Analyst</div>
       <div class="t-company">Kent State University</div>
-      <div class="t-desc">Designed and executed data validation test cases and analytical QA pipelines in SQL and Python — documented assumptions, test steps, and acceptance criteria ensuring analytical rigor; delivered quality-reviewed dashboards increasing stakeholder adoption of data-driven decisions by 25%.</div>
+      <ul class="t-list">
+        <li>Built SQL and Python data validation and reporting, cutting reporting errors ~20%.</li>
+        <li>Improved CNN/VGG16 image model accuracy from 73% to 98%.</li>
+      </ul>
       <div class="t-tags">
         <span class="t-tag">SQL</span><span class="t-tag">Python</span>
-        <span class="t-tag">QA Pipelines</span><span class="t-tag">Test Documentation</span>
+        <span class="t-tag">Data Validation</span><span class="t-tag">Machine Learning</span>
       </div>
     </div>
 
     <div class="timeline-item fade-in">
       <div class="t-meta">Nov 2021 — Aug 2023 · Hyderabad, India</div>
-      <div class="t-role">QA Engineer / Automation Lead <span style="color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:0.65rem;"> · Client: Cisco</span></div>
-      <div class="t-company">Infosys</div>
-      <div class="t-desc">Led end-to-end QA for XYLEM Smart Bonding — a large-scale ticket management platform serving millions of Cisco users. Drove automation from zero to 75% test coverage in 2 months as Automation Lead, architecting Selenium and UiPath frameworks with daily regression execution. Executed functional, regression, integration, UAT, system, and load testing; conducted KT sessions for onshore/offshore teams. Awarded Infosys Technology Award (Tech Transformers – Large) by CTO.</div>
+      <div class="t-role">QA Engineer / QA Automation Lead <span class="t-client"> · Client: Cisco Systems</span></div>
+      <div class="t-company">Infosys Limited</div>
+      <ul class="t-list">
+        <li>Built the QA framework for Cisco's XYLEM Smart Bonding platform (test cases, regression suites, release checklists), scaling automation from 0 to ~75% in 2 months and earning the Infosys Technology Award.</li>
+        <li>Debugged production integration issues across MuleSoft, MongoDB, and REST/SOAP APIs using logs and SQL queries; load-tested at 4K–7K transactions per minute.</li>
+        <li>Triaged live issues by severity during releases and led a 12-member QA team, delivering 4 releases with zero critical defects.</li>
+      </ul>
       <div class="t-tags">
-        <span class="t-tag">Selenium</span><span class="t-tag">UiPath Studio</span>
-        <span class="t-tag">Load Testing</span><span class="t-tag">UAT</span>
-        <span class="t-tag">API Testing</span><span class="t-tag">Jira</span>
-        <span class="t-tag">Agile</span>
+        <span class="t-tag">Selenium</span><span class="t-tag">MuleSoft</span>
+        <span class="t-tag">REST / SOAP</span><span class="t-tag">MongoDB</span>
+        <span class="t-tag">Load Testing</span><span class="t-tag">Team Lead</span>
       </div>
     </div>
 
@@ -701,78 +741,73 @@
 
     <div class="project-card fade-in">
       <div class="project-num">01 ──</div>
+      <div class="project-title">Conversational AI Quality &amp; Triage Workflow</div>
+      <div class="project-desc">Quality process for a member-facing LLM assistant: scoring rubrics, prompt and edge-case test sets, and escalation/handoff checks, plus a triage method that classifies each failure as agent, config, data, or platform — so issues reach the right owner with evidence attached.</div>
+      <div class="project-stack">
+        <span class="stack-tag">LLM Testing</span>
+        <span class="stack-tag">Quality Rubrics</span>
+        <span class="stack-tag">Log Analysis</span>
+        <span class="stack-tag">Claude Code</span>
+      </div>
+    </div>
+
+    <div class="project-card fade-in">
+      <div class="project-num">02 ──</div>
+      <div class="project-title">Data Validation Pipeline — 1M+ Daily Records</div>
+      <div class="project-desc">Automated validation, exception flagging, and reconciliation on 1M+ daily records with Airflow orchestration — zero quality incidents for 6+ months and 30% less manual review.</div>
+      <div class="project-stack">
+        <span class="stack-tag">Python</span>
+        <span class="stack-tag">Apache Airflow</span>
+        <span class="stack-tag">SQL</span>
+        <span class="stack-tag">Data Reconciliation</span>
+      </div>
+    </div>
+
+    <div class="project-card fade-in">
+      <div class="project-num">03 ──</div>
       <div class="project-title">Automated QA &amp; Regression Testing Framework</div>
-      <div class="project-desc">Built an end-to-end automated test framework covering functional, regression, and integration scenarios on 1M+ daily records. Designed test plans, documented defects, and validated edge cases — automated daily regression execution reducing manual QA effort by 75% with zero production defects across release cycles.</div>
+      <div class="project-desc">End-to-end functional, regression, and integration suite with automated daily runs — cut manual QA effort 75% with zero production defects.</div>
       <div class="project-stack">
         <span class="stack-tag">Python</span>
         <span class="stack-tag">Selenium</span>
-        <span class="stack-tag">UiPath</span>
         <span class="stack-tag">SQL</span>
         <span class="stack-tag">Regression Testing</span>
       </div>
     </div>
 
     <div class="project-card fade-in">
-      <div class="project-num">02 ──</div>
-      <div class="project-title">Mobile-Responsive Application QA &amp; Performance Validation</div>
-      <div class="project-desc">Validated mobile-responsive and cross-device application behavior across iOS and Android environments. Executed usability, performance, and regression test cases; documented defect findings and drove resolution with engineering teams to ensure reliable experiences at scale.</div>
+      <div class="project-num">04 ──</div>
+      <div class="project-title">XYLEM Smart Bonding — QA Automation Lead</div>
+      <div class="project-desc">Built the QA framework for Cisco's ticket-bonding platform from scratch — test cases, regression suites, and release checklists — scaling automation from 0 to ~75% in 2 months and shipping 4 releases with zero critical defects.</div>
       <div class="project-stack">
-        <span class="stack-tag">Python</span>
-        <span class="stack-tag">Appium</span>
-        <span class="stack-tag">iOS Testing</span>
-        <span class="stack-tag">Android</span>
-        <span class="stack-tag">Plotly</span>
-      </div>
-    </div>
-
-    <div class="project-card fade-in">
-      <div class="project-num">03 ──</div>
-      <div class="project-title">XYLEM Smart Bonding — Automation Lead</div>
-      <div class="project-desc">Led QA automation on a large-scale Cisco ticket management platform serving millions of users. Architected Selenium and UiPath frameworks from scratch, achieving 75% automation coverage in 2 months with daily regression cycles across functional, integration, and UAT environments. Earned Infosys Technology Award by CTO.</div>
-      <div class="project-stack">
-        <span class="stack-tag">Selenium WebDriver</span>
-        <span class="stack-tag">UiPath Studio</span>
-        <span class="stack-tag">Load Testing</span>
+        <span class="stack-tag">Selenium</span>
+        <span class="stack-tag">Release Checklists</span>
         <span class="stack-tag">Jira</span>
         <span class="stack-tag">Agile</span>
       </div>
     </div>
 
     <div class="project-card fade-in">
-      <div class="project-num">04 ──</div>
-      <div class="project-title">Data Validation Pipeline — 1M+ Daily Records</div>
-      <div class="project-desc">Designed and deployed automated data validation and exception-flagging pipelines with Apache Airflow DAG orchestration at BNS International. Implemented business rule validation and data reconciliation checks across ingested datasets — achieved zero quality incidents over 6+ months and reduced manual review effort by 30%.</div>
-      <div class="project-stack">
-        <span class="stack-tag">Python</span>
-        <span class="stack-tag">Apache Airflow</span>
-        <span class="stack-tag">SQL</span>
-        <span class="stack-tag">ETL Validation</span>
-        <span class="stack-tag">Data QA</span>
-      </div>
-    </div>
-
-    <div class="project-card fade-in">
       <div class="project-num">05 ──</div>
-      <div class="project-title">REST &amp; SOAP API Testing Suite</div>
-      <div class="project-desc">Validated data integrity and API quality across Cisco's client-facing interfaces and backend systems on the XYLEM platform. Performed REST/SOAP API testing and MongoDB data validation — reduced integration defects by 15% across release cycles.</div>
+      <div class="project-title">Integration Debugging &amp; Load Testing</div>
+      <div class="project-desc">Diagnosed production integration issues across MuleSoft, MongoDB, and REST/SOAP APIs using logs and SQL, and load-tested the platform at 4K–7K transactions per minute.</div>
       <div class="project-stack">
-        <span class="stack-tag">Postman</span>
-        <span class="stack-tag">REST API</span>
-        <span class="stack-tag">SOAP</span>
+        <span class="stack-tag">MuleSoft</span>
+        <span class="stack-tag">REST / SOAP</span>
         <span class="stack-tag">MongoDB</span>
-        <span class="stack-tag">Defect Tracking</span>
+        <span class="stack-tag">Postman</span>
       </div>
     </div>
 
     <div class="project-card fade-in">
       <div class="project-num">06 ──</div>
-      <div class="project-title">Analytical QA Dashboards — Kent State</div>
-      <div class="project-desc">Designed and executed data validation test cases and QA pipelines in SQL and Python for institutional analytics. Documented test assumptions, acceptance criteria, and validation steps — delivered quality-reviewed dashboards that increased stakeholder adoption of data-driven decisions by 25%.</div>
+      <div class="project-title">CNN Image Model — 73% → 98% Accuracy</div>
+      <div class="project-desc">Improved a CNN/VGG16 image classification model from 73% to 98% accuracy at Kent State, alongside SQL and Python validation and reporting that cut reporting errors ~20%.</div>
       <div class="project-stack">
-        <span class="stack-tag">SQL</span>
         <span class="stack-tag">Python</span>
-        <span class="stack-tag">Test Documentation</span>
-        <span class="stack-tag">Data Validation</span>
+        <span class="stack-tag">CNN / VGG16</span>
+        <span class="stack-tag">Machine Learning</span>
+        <span class="stack-tag">SQL</span>
       </div>
     </div>
 
@@ -785,14 +820,15 @@
   <h2>Academic<br><em>foundations</em></h2>
   <div class="edu-grid">
     <div class="edu-card fade-in">
-      <div class="edu-degree">Master of Science<br>Business Analytics</div>
+      <div class="edu-degree">Master of Science<br>Business Analytics (ML Specialization)</div>
       <div class="edu-school">Kent State University</div>
-      <div class="edu-year">Aug 2023 — Dec 2024 · Kent, Ohio</div>
+      <div class="edu-year">Aug 2023 — Dec 2024 · Ohio, USA · GPA 3.71/4.0</div>
+      <div class="edu-note">Coursework: Machine Learning, Predictive Analytics, Data Visualization</div>
     </div>
     <div class="edu-card fade-in">
-      <div class="edu-degree">Bachelor of Technology<br>Electronics &amp; Communications</div>
-      <div class="edu-school">Jawaharlal Nehru Technological University Kakinada (JNTUK)</div>
-      <div class="edu-year">Jun 2017 — Aug 2021 · India</div>
+      <div class="edu-degree">Bachelor of Technology<br>Electronics &amp; Communication Engineering</div>
+      <div class="edu-school">Vignan's Lara Institute of Technology &amp; Science</div>
+      <div class="edu-year">Jul 2017 — Jul 2021 · India · GPA 3.6/4.0</div>
     </div>
   </div>
 </section>
@@ -801,23 +837,28 @@
 <section id="contact">
   <div class="section-label" style="justify-content:center">Let's Connect</div>
   <h2>Ready to build<br><em>quality at scale?</em></h2>
-  <p class="contact-sub">Open to QA Engineer, SDET, and Automation Lead roles.</p>
+  <p class="contact-sub">Open to QA Engineer, AI/LLM Quality, and SDET roles — remote or NYC.</p>
   <div class="contact-links">
     <a href="mailto:jyothirmai478@gmail.com" class="contact-link">
       <div class="contact-icon">✉</div>
       <span class="cl-label">Email</span>
       <span class="cl-val">jyothirmai478@gmail.com</span>
     </a>
-    <a href="https://www.linkedin.com/in/jyothirmai-m-5b1879363/" target="_blank" class="contact-link">
+    <a href="tel:+13305543095" class="contact-link">
+      <div class="contact-icon">☏</div>
+      <span class="cl-label">Phone</span>
+      <span class="cl-val">330-554-3095</span>
+    </a>
+    <a href="https://www.linkedin.com/in/jyothirmai-m-5b1879363/" target="_blank" rel="noopener" class="contact-link">
       <div class="contact-icon">in</div>
       <span class="cl-label">LinkedIn</span>
-      <span class="cl-val">jyothirmaim</span>
+      <span class="cl-val">jyothirmai-m</span>
     </a>
-    <a href="mailto:jyothirmai478@gmail.com" class="contact-link">
+    <div class="contact-link">
       <div class="contact-icon">◆</div>
       <span class="cl-label">Location</span>
-      <span class="cl-val">Kent, Ohio, US</span>
-    </a>
+      <span class="cl-val">Ohio, USA · Remote / NYC</span>
+    </div>
   </div>
   <div style="margin-top:4rem;">
     <a href="mailto:jyothirmai478@gmail.com" class="btn-primary">Send a Message</a>
@@ -826,8 +867,8 @@
 
 <!-- FOOTER -->
 <footer>
-  <span>© 2025 Jyothirmai M — QA Engineer &amp; Automation Lead</span>
-  <span>Selenium · UiPath · Python · SQL · Postman</span>
+  <span>© 2026 Jyothirmai Moparthi — QA Engineer</span>
+  <span>LLM Quality · Python · SQL · Playwright · Postman</span>
 </footer>
 
 <script>
@@ -839,17 +880,6 @@
     });
   }, { threshold: 0.12 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-  const bars = document.querySelectorAll('.skill-bar-fill');
-  const barObs = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.width = entry.target.style.getPropertyValue('--pct') || getComputedStyle(entry.target).getPropertyValue('--pct');
-        barObs.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.5 });
-  bars.forEach(b => barObs.observe(b));
 </script>
 </body>
 </html>
